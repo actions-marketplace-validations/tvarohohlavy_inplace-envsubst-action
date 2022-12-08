@@ -21,7 +21,7 @@ deployment.json (BEFORE)
 
 ACTION
 ```yaml
-- uses: tvarohohlavy/inplace-envsubst-action@main
+- uses: tvarohohlavy/inplace-envsubst-action@v1.0.0
   env:
       VERSION: 1.2.3
       INSTANCE: staging
@@ -43,7 +43,7 @@ deployment.json (AFTER)
 
 ACTION
 ```yaml
-- uses: tvarohohlavy/inplace-envsubst-action@main
+- uses: tvarohohlavy/inplace-envsubst-action@v1.0.0
   env:
       VERSION: 1.2.3
       INSTANCE: staging
@@ -60,7 +60,7 @@ by listing varaibles you want to have replaced you can override default behaviou
 
 ACTION
 ```yaml
-- uses: tvarohohlavy/inplace-envsubst-action@main
+- uses: tvarohohlavy/inplace-envsubst-action@v1.0.0
   env:
       VERSION: 1.2.3
       INSTANCE: staging
