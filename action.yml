@@ -1,0 +1,16 @@
+name: 'inplace-envsubst-action'
+description: inplace envsubst of multiple files
+author: 'Jakub Travnik'
+branding:
+  icon: 'layers'
+  color: 'grey-dark'
+inputs:
+  files:
+    description: 'Files to run substitutions on.'
+    required: true
+  variables:
+    description: 'Variables that you want to replace. All encountered if not defined.'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
