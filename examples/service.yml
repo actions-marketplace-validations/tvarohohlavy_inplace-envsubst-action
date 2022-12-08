@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    kubernetes.io/metadata.name: ${SERVICE}
+  annotations:
+    acme.com/created-at: "${TIMESTAMP}"
+    acme.com/owner: "${OWNER}"
+  name: ${SERVICE}
+  namespace: ${NAMESPACE}
+spec:
+  ports:
+  - name: service
+    port: 80
+    protocol: TCP
+    targetPort: 8000
+  selector:
+    app: ${APPLICATION}
+  type: ClusterIP
