@@ -1,0 +1,35 @@
+name: Example Pipeline
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      NAMESPACE: production
+      SERVICE: prod-service
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: create TIMESTAMP environmental variable
+      run: echo "TIMESTAMP=$(date +\%Y-\%m-\%d_\%H-\%M)" >> $GITHUB_ENV
+
+    - name: use inplace-envsubst-action from this repository
+      uses: ./
+      env:
+        OWNER: tvarohohlavy
+        APPLICATION: prod-app
+      with:
+        variables: |
+          $NAMESPACE
+          $OWNER
+          $TIMESTAMP
+          $SERVICE
+          $APPLICATION
+        files: |
+          examples/namespace.yml
+          examples/service.yml
+
