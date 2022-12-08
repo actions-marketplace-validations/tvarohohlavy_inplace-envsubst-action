@@ -1,3 +1,5 @@
+[![Example Pipeline](https://github.com/tvarohohlavy/inplace-envsubst-action/actions/workflows/example.yml/badge.svg)](https://github.com/tvarohohlavy/inplace-envsubst-action/actions/workflows/example.yml)
+
 # inplace-envsubst-action
 Github Action for envsubst of multiple files in place
 
