@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    kubernetes.io/metadata.name: ${NAMESPACE}
+  annotations:
+    acme.com/created-at: "${TIMESTAMP}"
+    acme.com/owner: "${OWNER}"
+  name: ${NAMESPACE}
