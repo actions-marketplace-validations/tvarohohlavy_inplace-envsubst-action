@@ -33,7 +33,7 @@ jobs:
           examples/namespace.yml
           examples/service.yml
 
-    - name: read updatet files
+    - name: read updated files
       run: |
         cat examples/namespace.yml
         cat examples/service.yml
