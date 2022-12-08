@@ -3,7 +3,7 @@ description: inplace envsubst of multiple files
 author: 'Jakub Travnik'
 branding:
   icon: 'layers'
-  color: 'grey-dark'
+  color: 'black'
 inputs:
   files:
     description: 'Files to run substitutions on.'
